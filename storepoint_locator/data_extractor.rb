@@ -1,4 +1,5 @@
 require 'nokogiri'
+require 'csv'
 
 $parsing_rules = {
   'storepoint-name' => 'text',
@@ -22,11 +23,14 @@ def extract_location_data(location)
   hash
 end
 
-def extract_data(html_file)
-  doc = File.open(html_file) { |f| Nokogiri::HTML4(f) }
+def extract_data(html_input, csv_output)
+  out = File.open(csv_output, 'w')
+  out << $parsing_rules.keys.to_csv 
+  doc = File.open(html_input) { |f| Nokogiri::HTML4(f) }
   doc.css('div.storepoint-location').each do |location|
-    puts extract_location_data(location)
+    out << extract_location_data(location).values.to_csv
   end
+  out.close
 end
 
-extract_data('input.html')
+extract_data('input.html', 'output.csv')
