@@ -23,7 +23,7 @@ Once you've seen this script example, you can easily play with it to adapt it to
 With Ruby and the required gems installed, just launch the command passing the web page URL as first argument (`ARGV[0]`) and
 the specific HTML tag as second argument (`ARGV[1]`):
 ```
-ruby extract_weather_info.rb "https://your-url-here" "html_tag"
+ruby data_extractor.rb "https://your-url-here" "html_tag"
 ```
 For example:
 ```
