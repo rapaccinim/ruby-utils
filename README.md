@@ -7,4 +7,4 @@ Some Ruby programs I am using or I have used to accelerate my work
 * [extract_weather_info](./extract_weather_info) - getting an HTML page from a URL in order to extract text from specified tags
 * [wp_pics_alt_text](./wp_pics_alt_text) - getting an alternative text from a picture file name (a bit lazy here...)
 * [jobs_pdfs_comparison](./jobs_pdfs_comparison) - comparing a list of jobs and the content of a folder to find missing PDF files
-
+* [filter_csv](./filter_csv) - filtering specific columns of an input file according based on a list of keywords
